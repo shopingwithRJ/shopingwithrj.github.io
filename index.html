@@ -84,6 +84,106 @@
             100% { transform: translateX(-50%); }
         }
 
+        /* ===== SEARCH SECTION ===== */
+        .search-section {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .search-title {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .search-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out 0.3s backwards;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1rem;
+            border-radius: 50px;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .search-button {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .search-button:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+            transform: scale(1.05);
+        }
+
+        .search-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .search-suggestion {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .search-suggestion:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            font-size: 1.2rem;
+        }
+
+        .search-results-count {
+            text-align: center;
+            margin: 20px 0;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
         /* ===== NAVIGATION ===== */
         .navbar {
             background-color: white;
@@ -236,7 +336,7 @@
         /* ===== HERO SECTION ===== */
         .hero {
             background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 50%, #f0f4ff 100%);
-            padding: 80px 0 120px;
+            padding: 80px 0 40px;
             position: relative;
             overflow: hidden;
         }
@@ -434,7 +534,7 @@
 
         /* ===== MAIN CONTENT ===== */
         .main-container {
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         .content-with-sidebar {
@@ -1205,6 +1305,21 @@
             .products-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
+            
+            .search-box {
+                flex-direction: column;
+                border-radius: 15px;
+            }
+            
+            .search-input {
+                border-radius: 15px 15px 0 0;
+                text-align: center;
+            }
+            
+            .search-button {
+                border-radius: 0 0 15px 15px;
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1228,6 +1343,10 @@
             .btn {
                 width: 100%;
                 max-width: 300px;
+            }
+            
+            .search-title {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1258,6 +1377,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#search">Search</a></li>
                 <li><a href="#categories">Shop</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
@@ -1290,7 +1410,7 @@
                 </h1>
                 <p class="hero-subtitle">Discover amazing products from Amazon, Flipkart & Meesho. Every purchase earns you reward points!</p>
                 <div class="hero-buttons">
-                    <a href="#categories" class="btn btn-primary ripple">Start Shopping</a>
+                    <a href="#search" class="btn btn-primary ripple">Search Products</a>
                     <a href="#rewards" class="btn btn-secondary ripple">Earn Rewards</a>
                 </div>
             </div>
@@ -1306,10 +1426,50 @@
         <div class="wave-animation"></div>
     </section>
 
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+        <div class="container search-container">
+            <h2 class="search-title">Search Products</h2>
+            <p class="search-subtitle">Find your favorite products from Amazon, Flipkart & Meesho</p>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" id="search-input" placeholder="Search for products... (e.g., shoes, mobile, t-shirt)">
+                <button class="search-button" id="search-button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            
+            <div class="search-suggestions">
+                <span class="search-suggestion" data-search="shoes">Shoes</span>
+                <span class="search-suggestion" data-search="mobile">Mobile</span>
+                <span class="search-suggestion" data-search="t-shirt">T-Shirt</span>
+                <span class="search-suggestion" data-search="watch">Watch</span>
+                <span class="search-suggestion" data-search="earphone">Earphone</span>
+                <span class="search-suggestion" data-search="jeans">Jeans</span>
+                <span class="search-suggestion" data-search="dress">Dress</span>
+                <span class="search-suggestion" data-search="power bank">Power Bank</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <div class="container main-container">
         <div class="content-with-sidebar">
             <main class="main-content">
+                <!-- Search Results Section -->
+                <div id="search-results-container">
+                    <h2 class="section-title" style="display: none;" id="search-results-title">Search Results</h2>
+                    <p class="search-results-count" id="search-results-count" style="display: none;"></p>
+                    <div class="products-grid" id="search-results-grid">
+                        <!-- Search results will be inserted by JavaScript -->
+                    </div>
+                    <div class="no-results" id="no-results" style="display: none;">
+                        <i class="fas fa-search fa-3x" style="margin-bottom: 20px; color: #cbd5e1;"></i>
+                        <h3>No products found</h3>
+                        <p>Try searching for something else or browse our categories</p>
+                    </div>
+                </div>
+
                 <!-- Categories Section -->
                 <section class="categories" id="categories">
                     <h2 class="section-title">Shop By Category</h2>
@@ -1331,8 +1491,8 @@
                     <div class="steps-container">
                         <div class="step">
                             <div class="step-icon">1</div>
-                            <h3>Visit Website</h3>
-                            <p>Browse through our curated collection of products from top categories.</p>
+                            <h3>Search Products</h3>
+                            <p>Use our search box to find products you like from various categories.</p>
                         </div>
                         <div class="step">
                             <div class="step-icon">2</div>
@@ -1476,6 +1636,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#search">Search Products</a></li>
                         <li><a href="#categories">Shop</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
@@ -1525,7 +1686,7 @@
     </div>
 
     <script>
-        // ===== PRODUCT DATA =====
+        // ===== ENHANCED PRODUCT DATA =====
         const products = [
             {
                 id: 1,
@@ -1536,18 +1697,20 @@
                 discountedPrice: "₹799",
                 discount: "38% off",
                 affiliateLink: "https://www.amazon.in/demo-product-1",
-                store: "Amazon"
+                store: "Amazon",
+                tags: ["t-shirt", "clothes", "men", "casual", "cotton"]
             },
             {
                 id: 2,
                 name: "Wireless Bluetooth Earphones",
                 category: "electronics",
-                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80",
+                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                 originalPrice: "₹2999",
                 discountedPrice: "₹1999",
                 discount: "33% off",
                 affiliateLink: "https://www.flipkart.com/demo-product-2",
-                store: "Flipkart"
+                store: "Flipkart",
+                tags: ["earphone", "bluetooth", "wireless", "electronics", "audio"]
             },
             {
                 id: 3,
@@ -1558,7 +1721,8 @@
                 discountedPrice: "₹1799",
                 discount: "28% off",
                 affiliateLink: "https://www.meesho.com/demo-product-3",
-                store: "Meesho"
+                store: "Meesho",
+                tags: ["shoes", "running", "sports", "sneakers", "athletic"]
             },
             {
                 id: 4,
@@ -1569,7 +1733,8 @@
                 discountedPrice: "₹1199",
                 discount: "37% off",
                 affiliateLink: "https://www.amazon.in/demo-product-4",
-                store: "Amazon"
+                store: "Amazon",
+                tags: ["dress", "women", "summer", "clothes", "fashion"]
             },
             {
                 id: 5,
@@ -1580,7 +1745,8 @@
                 discountedPrice: "₹3499",
                 discount: "30% off",
                 affiliateLink: "https://www.flipkart.com/demo-product-5",
-                store: "Flipkart"
+                store: "Flipkart",
+                tags: ["watch", "smartwatch", "fitness", "tracker", "electronics"]
             },
             {
                 id: 6,
@@ -1591,7 +1757,8 @@
                 discountedPrice: "₹2399",
                 discount: "27% off",
                 affiliateLink: "https://www.meesho.com/demo-product-6",
-                store: "Meesho"
+                store: "Meesho",
+                tags: ["shoes", "formal", "leather", "office", "men"]
             },
             {
                 id: 7,
@@ -1602,7 +1769,8 @@
                 discountedPrice: "₹1499",
                 discount: "32% off",
                 affiliateLink: "https://www.amazon.in/demo-product-7",
-                store: "Amazon"
+                store: "Amazon",
+                tags: ["jeans", "denim", "men", "clothes", "pants"]
             },
             {
                 id: 8,
@@ -1613,7 +1781,8 @@
                 discountedPrice: "₹999",
                 discount: "33% off",
                 affiliateLink: "https://www.flipkart.com/demo-product-8",
-                store: "Flipkart"
+                store: "Flipkart",
+                tags: ["power bank", "portable", "charger", "electronics", "battery"]
             },
             {
                 id: 9,
@@ -1624,7 +1793,20 @@
                 discountedPrice: "₹1299",
                 discount: "28% off",
                 affiliateLink: "https://www.meesho.com/demo-product-9",
-                store: "Meesho"
+                store: "Meesho",
+                tags: ["shoes", "sneakers", "casual", "comfort", "footwear"]
+            },
+            {
+                id: 10,
+                name: "Smartphone - Latest Model",
+                category: "electronics",
+                image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                originalPrice: "₹25999",
+                discountedPrice: "₹21999",
+                discount: "15% off",
+                affiliateLink: "https://www.amazon.in/demo-product-10",
+                store: "Amazon",
+                tags: ["mobile", "smartphone", "android", "electronics", "phone"]
             }
         ];
 
@@ -1633,9 +1815,17 @@
         let currentRedirectLink = "";
         let countdownTimer;
         let countdownValue = 5;
+        let isSearchActive = false;
 
         // ===== DOM ELEMENTS =====
         const productsContainer = document.getElementById('products-container');
+        const searchResultsGrid = document.getElementById('search-results-grid');
+        const searchResultsTitle = document.getElementById('search-results-title');
+        const searchResultsCount = document.getElementById('search-results-count');
+        const noResults = document.getElementById('no-results');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchSuggestions = document.querySelectorAll('.search-suggestion');
         const pointsCount = document.getElementById('points-count');
         const navPoints = document.getElementById('nav-points');
         const progressFill = document.getElementById('progress-fill');
@@ -1652,8 +1842,8 @@
 
         // ===== INITIALIZATION =====
         document.addEventListener('DOMContentLoaded', function() {
-            // Load products
-            displayProducts(products);
+            // Load all products initially
+            displayProducts(products, productsContainer);
             
             // Set up event listeners
             setupEventListeners();
@@ -1693,9 +1883,92 @@
             });
         });
 
+        // ===== SEARCH FUNCTIONS =====
+        function performSearch(searchTerm) {
+            if (!searchTerm.trim()) {
+                resetSearch();
+                return;
+            }
+            
+            isSearchActive = true;
+            
+            // Convert search term to lowercase for case-insensitive search
+            const term = searchTerm.toLowerCase();
+            
+            // Filter products based on search term
+            const searchResults = products.filter(product => {
+                // Search in product name
+                if (product.name.toLowerCase().includes(term)) return true;
+                
+                // Search in product category
+                if (product.category.toLowerCase().includes(term)) return true;
+                
+                // Search in product tags
+                if (product.tags.some(tag => tag.toLowerCase().includes(term))) return true;
+                
+                // Search in product store
+                if (product.store.toLowerCase().includes(term)) return true;
+                
+                return false;
+            });
+            
+            // Display search results
+            displaySearchResults(searchResults, searchTerm);
+        }
+
+        function displaySearchResults(results, searchTerm) {
+            // Hide regular products and show search results
+            productsContainer.style.display = "none";
+            document.getElementById('categories').style.display = "none";
+            
+            // Show search results section
+            searchResultsTitle.style.display = "block";
+            searchResultsTitle.textContent = `Search Results for "${searchTerm}"`;
+            searchResultsGrid.style.display = "grid";
+            
+            if (results.length > 0) {
+                // Show results count
+                searchResultsCount.style.display = "block";
+                searchResultsCount.textContent = `${results.length} product${results.length > 1 ? 's' : ''} found`;
+                
+                // Hide no results message
+                noResults.style.display = "none";
+                
+                // Display products
+                displayProducts(results, searchResultsGrid);
+            } else {
+                // Hide results count
+                searchResultsCount.style.display = "none";
+                
+                // Show no results message
+                noResults.style.display = "block";
+                
+                // Clear search results grid
+                searchResultsGrid.innerHTML = "";
+                searchResultsGrid.style.display = "none";
+            }
+        }
+
+        function resetSearch() {
+            isSearchActive = false;
+            
+            // Hide search results section
+            searchResultsTitle.style.display = "none";
+            searchResultsCount.style.display = "none";
+            searchResultsGrid.style.display = "none";
+            noResults.style.display = "none";
+            
+            // Show regular products and categories
+            productsContainer.style.display = "grid";
+            document.getElementById('categories').style.display = "block";
+            
+            // Clear search input
+            searchInput.value = "";
+        }
+
         // ===== PRODUCT FUNCTIONS =====
-        function displayProducts(productsArray) {
-            productsContainer.innerHTML = '';
+        function displayProducts(productsArray, container) {
+            container.innerHTML = '';
             
             productsArray.forEach(product => {
                 const productCard = document.createElement('div');
@@ -1718,11 +1991,11 @@
                     </div>
                 `;
                 
-                productsContainer.appendChild(productCard);
+                container.appendChild(productCard);
             });
             
             // Add event listeners to Buy Now buttons
-            document.querySelectorAll('.buy-now-btn').forEach(button => {
+            container.querySelectorAll('.buy-now-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     const productId = this.getAttribute('data-id');
                     const affiliateLink = this.getAttribute('data-link');
@@ -1733,10 +2006,10 @@
 
         function filterProducts(category) {
             if (category === 'all') {
-                displayProducts(products);
+                displayProducts(products, productsContainer);
             } else {
                 const filteredProducts = products.filter(product => product.category === category);
-                displayProducts(filteredProducts);
+                displayProducts(filteredProducts, productsContainer);
             }
         }
 
@@ -1813,6 +2086,27 @@
 
         // ===== EVENT LISTENERS SETUP =====
         function setupEventListeners() {
+            // Search button click
+            searchButton.addEventListener('click', function() {
+                performSearch(searchInput.value);
+            });
+            
+            // Search input enter key
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch(searchInput.value);
+                }
+            });
+            
+            // Search suggestions
+            searchSuggestions.forEach(suggestion => {
+                suggestion.addEventListener('click', function() {
+                    const searchTerm = this.getAttribute('data-search');
+                    searchInput.value = searchTerm;
+                    performSearch(searchTerm);
+                });
+            });
+            
             // Continue redirect button
             continueRedirectBtn.addEventListener('click', redirectToAffiliate);
             
@@ -1845,6 +2139,11 @@
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const category = this.getAttribute('data-category');
+                    
+                    // Reset search if active
+                    if (isSearchActive) {
+                        resetSearch();
+                    }
                     
                     // Scroll to categories section
                     document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
