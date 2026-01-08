@@ -771,4 +771,1484 @@
             padding: 30px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 1
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer-content {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 80px;
+        }
+
+        .warning-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #fef3c7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .warning-box i {
+            font-size: 2rem;
+            color: #d97706;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+        }
+
+        .disclaimer-list {
+            list-style: none;
+        }
+
+        .disclaimer-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .disclaimer-list i {
+            color: #2563eb;
+            margin-top: 5px;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .reward-card {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
+            animation: fadeIn 0.8s ease-out 0.6s backwards;
+        }
+
+        .reward-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .points-display {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .points-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+        }
+
+        #points-count {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .points-circle p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .points-info {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .rewards-progress {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: white;
+            width: 0%;
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .btn-reward {
+            width: 100%;
+            background-color: white;
+            color: #2563eb;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .btn-reward:hover {
+            background-color: #f0f9ff;
+            transform: translateY(-3px);
+        }
+
+        .reward-note {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .ad-sidebar {
+            margin-bottom: 30px;
+        }
+
+        .top-products {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .top-products h3 {
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trending-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .trending-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .trending-item:hover {
+            background-color: #f8fafc;
+        }
+
+        .trending-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .trending-info h4 {
+            font-size: 0.95rem;
+            color: #1a365d;
+            margin-bottom: 5px;
+        }
+
+        .trending-info p {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #1a365d;
+            color: white;
+            padding-top: 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .footer-logo p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #2563eb;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: #60a5fa;
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom a {
+            color: #60a5fa;
+        }
+
+        .affiliate-note {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== NOTIFICATIONS & POPUPS ===== */
+        .points-notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            z-index: 1001;
+            transform: translateX(150%);
+            transition: transform 0.5s ease;
+            max-width: 300px;
+        }
+
+        .points-notification.show {
+            transform: translateX(0);
+        }
+
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notification-content i {
+            font-size: 1.8rem;
+        }
+
+        .redirect-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1002;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .redirect-popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
+
+        .redirect-popup.show .popup-content {
+            transform: scale(1);
+        }
+
+        .popup-content h3 {
+            font-size: 1.8rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .popup-content p {
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        .points-message {
+            font-size: 1.1rem;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .points-message span {
+            background-color: #f0f9ff;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .popup-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            justify-content: center;
+        }
+
+        .btn-continue {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .btn-continue:hover {
+            background-color: #059669;
+        }
+
+        .btn-cancel {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background-color: #dc2626;
+        }
+
+        .redirect-timer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        #countdown {
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .content-with-sidebar {
+                flex-direction: column;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .sidebar {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .search-container {
+                order: 3;
+                width: 100%;
+                max-width: 100%;
+                margin: 20px 0 0 0;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="logo-text">
+                    <span class="logo-letter">S</span>
+                    <span class="logo-letter">H</span>
+                    <span class="logo-letter">O</span>
+                    <span class="logo-letter">P</span>
+                    <span class="logo-letter">P</span>
+                    <span class="logo-letter">I</span>
+                    <span class="logo-letter">N</span>
+                    <span class="logo-letter">G</span>
+                    <span class="logo-space"></span>
+                    <span class="logo-letter">W</span>
+                    <span class="logo-letter">I</span>
+                    <span class="logo-letter">T</span>
+                    <span class="logo-letter">H</span>
+                    <span class="logo-space"></span>
+                    <span class="logo-letter logo-rj">R</span>
+                    <span class="logo-letter logo-rj">J</span>
+                </a>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="search-container">
+                <input type="text" class="search-box" id="search-box" placeholder="Search for products (e.g., shoes, t-shirt, watch...)">
+                <button class="search-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#rewards" class="rewards-nav">Rewards <span id="nav-points">0</span></a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Ad Space (Header) -->
+    <div class="ad-section header-ad">
+        <div class="container">
+            <div class="ad-placeholder">
+                <!-- Adstera Ad Code Here -->
+                <p>Ad Space (728x90) - Adstera Ad Code Here</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Shop Smart,</span>
+                    <span class="title-line">Earn Rewards</span>
+                    <span class="title-line highlight">Shopping With RJ</span>
+                </h1>
+                <p class="hero-subtitle">Discover amazing products from Amazon, Flipkart & Meesho. Every purchase earns you reward points!</p>
+                <div class="hero-buttons">
+                    <a href="#categories" class="btn btn-primary ripple">Start Shopping</a>
+                    <a href="#rewards" class="btn btn-secondary ripple">Earn Rewards</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Online shopping illustration" class="hero-img">
+            </div>
+        </div>
+        <div class="wave-animation"></div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-container">
+        <div class="content-with-sidebar">
+            <main class="main-content">
+                <!-- Categories Section -->
+                <section class="categories" id="categories">
+                    <h2 class="section-title">Shop By Category</h2>
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">All Products</button>
+                        <button class="filter-btn" data-category="clothes"><i class="fas fa-tshirt"></i> Clothes</button>
+                        <button class="filter-btn" data-category="electronics"><i class="fas fa-mobile-alt"></i> Electronics</button>
+                        <button class="filter-btn" data-category="shoes"><i class="fas fa-shoe-prints"></i> Shoes</button>
+                        <button class="filter-btn" data-category="home"><i class="fas fa-home"></i> Home</button>
+                        <button class="filter-btn" data-category="beauty"><i class="fas fa-spa"></i> Beauty</button>
+                    </div>
+
+                    <div class="products-grid" id="products-container">
+                        <!-- Product cards will be inserted by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- How It Works Section -->
+                <section class="how-it-works" id="how-it-works">
+                    <h2 class="section-title">How It Works</h2>
+                    <div class="steps-container">
+                        <div class="step">
+                            <div class="step-icon">1</div>
+                            <h3>Visit Website</h3>
+                            <p>Browse through our curated collection of products from top categories.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">2</div>
+                            <h3>Search & Click</h3>
+                            <p>Search for your favorite products and click the "Buy Now" button.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">3</div>
+                            <h3>Shop on Partner Sites</h3>
+                            <p>You'll be redirected to Amazon, Flipkart or Meesho to complete your purchase.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">4</div>
+                            <h3>Earn Reward Points</h3>
+                            <p>Get reward points for every purchase which you can redeem later.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section class="about" id="about">
+                    <h2 class="section-title">About Shopping With RJ</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Our Mission</h3>
+                            <p>We help users shop smart and earn rewards. Shopping With RJ is your one-stop destination to discover amazing products from top e-commerce platforms while earning reward points on every purchase.</p>
+                            <p>Our team carefully selects trending products across categories to save you time and help you make informed buying decisions.</p>
+                            <a href="#disclaimer" class="btn btn-outline">Read Disclaimer</a>
+                        </div>
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Shopping with RJ team">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Disclaimer Section -->
+                <section class="disclaimer" id="disclaimer">
+                    <h2 class="section-title">Disclaimer</h2>
+                    <div class="disclaimer-content">
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Important Notice</h3>
+                        </div>
+                        <ul class="disclaimer-list">
+                            <li><i class="fas fa-info-circle"></i> We are not Amazon, Flipkart or Meesho. We are an independent affiliate website.</li>
+                            <li><i class="fas fa-info-circle"></i> All product rights belong to their respective owners.</li>
+                            <li><i class="fas fa-info-circle"></i> Prices and availability may change without notice.</li>
+                            <li><i class="fas fa-info-circle"></i> We may earn a commission when you purchase through our links.</li>
+                            <li><i class="fas fa-info-circle"></i> Reward points system is for demonstration purposes only.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar with Ads and Rewards -->
+            <aside class="sidebar">
+                <!-- Reward Points Section -->
+                <div class="reward-card" id="rewards">
+                    <h3><i class="fas fa-trophy"></i> Your Rewards</h3>
+                    <div class="points-display">
+                        <div class="points-circle">
+                            <span id="points-count">0</span>
+                            <p>Points</p>
+                        </div>
+                        <p class="points-info">Click on products to earn reward points!</p>
+                    </div>
+                    <div class="rewards-progress">
+                        <p>Next milestone: <strong>200 points</strong></p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-reward" id="claim-btn" disabled>Claim Rewards (200 pts needed)</button>
+                    <p class="reward-note">Reward system is for demonstration purposes only.</p>
+                </div>
+
+                <!-- Sidebar Ad Space -->
+                <div class="ad-sidebar">
+                    <div class="ad-placeholder vertical-ad">
+                        <!-- Adstera Ad Code Here -->
+                        <p>Ad Space (300x600) - Adstera Ad Code Here</p>
+                    </div>
+                </div>
+
+                <!-- Top Products -->
+                <div class="top-products">
+                    <h3><i class="fas fa-fire"></i> Trending Now</h3>
+                    <div class="trending-list">
+                        <div class="trending-item">
+                            <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/b/l/g/6-cargo-6-cargo-black-original-imagzh8yyfhbpyhy.jpeg?q=70&crop=false" alt="Running shoes">
+                            <div class="trending-info">
+                                <h4>Cargo Shoes</h4>
+                                <p>₹799</p>
+                            </div>
+                        </div>
+                        <div class="trending-item">
+                            <img src="https://m.media-amazon.com/images/I/61EnLIlUq8L._SL1500_.jpg" alt="Smartphone">
+                            <div class="trending-info">
+                                <h4>OnePlus Nord CE3</h4>
+                                <p>₹24,999</p>
+                            </div>
+                        </div>
+                        <div class="trending-item">
+                            <img src="https://images.meesho.com/images/products/392141014/tssdm_512.webp" alt="Casual wear">
+                            <div class="trending-info">
+                                <h4>Men's T-Shirt</h4>
+                                <p>₹299</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer Ad Space -->
+        <div class="ad-section footer-ad">
+            <div class="container">
+                <div class="ad-placeholder">
+                    <!-- Adstera Ad Code Here -->
+                    <p>Ad Space (728x90) - Adstera Ad Code Here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Shopping With RJ</h3>
+                    <p>Shop Smart, Earn Rewards</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" data-category="clothes">Clothes</a></li>
+                        <li><a href="#" data-category="electronics">Electronics</a></li>
+                        <li><a href="#" data-category="shoes">Shoes</a></li>
+                        <li><a href="#" data-category="home">Home</a></li>
+                        <li><a href="#" data-category="beauty">Beauty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> rjgoutam09236@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ghaziabad, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Shopping With RJ. All rights reserved. | <a href="#disclaimer">Disclaimer</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="affiliate-note">We are a participant in various affiliate programs, including Amazon Associates, Flipkart Affiliate, and Meesho Partner Program.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Points Notification -->
+    <div class="points-notification" id="points-notification">
+        <div class="notification-content">
+            <i class="fas fa-gift"></i>
+            <p>You earned <span id="earned-points">5</span> reward points! 🎉</p>
+        </div>
+    </div>
+
+    <!-- Redirect Popup -->
+    <div class="redirect-popup" id="redirect-popup">
+        <div class="popup-content">
+            <h3>Redirecting to Partner Site</h3>
+            <p>You're being redirected to our partner site to complete your purchase.</p>
+            <p class="points-message">You'll earn <span>5 reward points</span> for this purchase!</p>
+            <div class="popup-buttons">
+                <button class="btn btn-continue" id="continue-redirect">Continue</button>
+                <button class="btn btn-cancel" id="cancel-redirect">Cancel</button>
+            </div>
+            <p class="redirect-timer">Redirecting in <span id="countdown">5</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        // ===== REAL PRODUCT DATA WITH ACTUAL PRICES & IMAGES =====
+        const products = [
+            {
+                id: 1,
+                name: "Men's Cargo Shoes - Black",
+                category: "shoes",
+                image: "https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/b/l/g/6-cargo-6-cargo-black-original-imagzh8yyfhbpyhy.jpeg?q=70&crop=false",
+                originalPrice: "₹1,499",
+                discountedPrice: "₹799",
+                discount: "47% off",
+                rating: 4.2,
+                ratingCount: "2.1k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Men's%20Cargo%20Shoes%20Black&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            },
+            {
+                id: 2,
+                name: "OnePlus Nord CE3 5G (Aqua Surge, 8GB RAM, 128GB Storage)",
+                category: "electronics",
+                image: "https://m.media-amazon.com/images/I/61EnLIlUq8L._SL1500_.jpg",
+                originalPrice: "₹26,999",
+                discountedPrice: "₹24,999",
+                discount: "7% off",
+                rating: 4.3,
+                ratingCount: "12.5k",
+                affiliateLink: "https://www.amazon.in/dp/B0CDF5Y5JW",
+                store: "Amazon"
+            },
+            {
+                id: 3,
+                name: "Men's Cotton Printed T-Shirt - Pack of 3",
+                category: "clothes",
+                image: "https://images.meesho.com/images/products/392141014/tssdm_512.webp",
+                originalPrice: "₹899",
+                discountedPrice: "₹299",
+                discount: "67% off",
+                rating: 4.0,
+                ratingCount: "8.7k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Men's%20Cotton%20T-Shirt%20Pack&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            },
+            {
+                id: 4,
+                name: "Boat Rockerz 450 Bluetooth Headphone (Luscious Black)",
+                category: "electronics",
+                image: "https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg",
+                originalPrice: "₹1,999",
+                discountedPrice: "₹1,499",
+                discount: "25% off",
+                rating: 4.2,
+                ratingCount: "45.2k",
+                affiliateLink: "https://www.amazon.in/dp/B07TV7YQ81",
+                store: "Amazon"
+            },
+            {
+                id: 5,
+                name: "Women's Kurti with Palazzo - Floral Print",
+                category: "clothes",
+                image: "https://images.meesho.com/images/products/380686329/a0vjr_512.webp",
+                originalPrice: "₹1,299",
+                discountedPrice: "₹499",
+                discount: "62% off",
+                rating: 4.1,
+                ratingCount: "5.3k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Women's%20Kurti%20with%20Palazzo&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            },
+            {
+                id: 6,
+                name: "Realme Narzo 60 5G (Cosmic Black, 8GB+128GB)",
+                category: "electronics",
+                image: "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/b/h/8/-original-imags37h5mqbneer.jpeg?q=70&crop=false",
+                originalPrice: "₹19,999",
+                discountedPrice: "₹17,999",
+                discount: "10% off",
+                rating: 4.3,
+                ratingCount: "3.4k",
+                affiliateLink: "https://www.flipkart.com/realme-narzo-60-cosmic-black-128-gb/p/itm191403ee90a67",
+                store: "Flipkart"
+            },
+            {
+                id: 7,
+                name: "Sports Running Shoes - White & Blue",
+                category: "shoes",
+                image: "https://images.meesho.com/images/products/369482961/2fjxn_512.webp",
+                originalPrice: "₹1,299",
+                discountedPrice: "₹599",
+                discount: "54% off",
+                rating: 4.0,
+                ratingCount: "6.8k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Sports%20Running%20Shoes&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            },
+            {
+                id: 8,
+                name: "Mi 108 cm (43 inches) 4K Ultra HD Android Smart LED TV",
+                category: "electronics",
+                image: "https://m.media-amazon.com/images/I/71vZypjNkPS._SL1500_.jpg",
+                originalPrice: "₹32,999",
+                discountedPrice: "₹26,999",
+                discount: "18% off",
+                rating: 4.2,
+                ratingCount: "8.9k",
+                affiliateLink: "https://www.amazon.in/dp/B0B94K3K8Q",
+                store: "Amazon"
+            },
+            {
+                id: 9,
+                name: "Women's Handbag - Stylish Party Purse",
+                category: "accessories",
+                image: "https://images.meesho.com/images/products/383545247/pgxwr_512.webp",
+                originalPrice: "₹799",
+                discountedPrice: "₹349",
+                discount: "56% off",
+                rating: 4.2,
+                ratingCount: "4.2k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Women's%20Stylish%20Handbag&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            },
+            {
+                id: 10,
+                name: "Kitchen Storage Containers Set - 15 Pieces",
+                category: "home",
+                image: "https://images.meesho.com/images/products/369506204/yw7hp_512.webp",
+                originalPrice: "₹999",
+                discountedPrice: "₹499",
+                discount: "50% off",
+                rating: 4.1,
+                ratingCount: "7.3k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Kitchen%20Storage%20Containers%20Set&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            },
+            {
+                id: 11,
+                name: "Lakme Absolute 3D Matte Lip Color - Red Carpet",
+                category: "beauty",
+                image: "https://m.media-amazon.com/images/I/61-fQXkY55L._SL1500_.jpg",
+                originalPrice: "₹799",
+                discountedPrice: "₹599",
+                discount: "25% off",
+                rating: 4.3,
+                ratingCount: "15.6k",
+                affiliateLink: "https://www.amazon.in/dp/B08YWTZQ3P",
+                store: "Amazon"
+            },
+            {
+                id: 12,
+                name: "Men's Formal Shoes - Brown Leather",
+                category: "shoes",
+                image: "https://images.meesho.com/images/products/384832527/hdrxq_512.webp",
+                originalPrice: "₹1,499",
+                discountedPrice: "₹699",
+                discount: "53% off",
+                rating: 4.0,
+                ratingCount: "3.9k",
+                affiliateLink: "https://ltl.sh/share/bniwxmaaaa?external_product_id=80shnp&product_name=Men's%20Formal%20Leather%20Shoes&shared_by=NDM5ODUwMDYx",
+                store: "Meesho"
+            }
+        ];
+
+        // ===== GLOBAL VARIABLES =====
+        let rewardPoints = 0;
+        let currentRedirectLink = "";
+        let countdownTimer;
+        let countdownValue = 5;
+
+        // ===== DOM ELEMENTS =====
+        const productsContainer = document.getElementById('products-container');
+        const pointsCount = document.getElementById('points-count');
+        const navPoints = document.getElementById('nav-points');
+        const progressFill = document.getElementById('progress-fill');
+        const claimBtn = document.getElementById('claim-btn');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const pointsNotification = document.getElementById('points-notification');
+        const redirectPopup = document.getElementById('redirect-popup');
+        const continueRedirectBtn = document.getElementById('continue-redirect');
+        const cancelRedirectBtn = document.getElementById('cancel-redirect');
+        const countdownElement = document.getElementById('countdown');
+        const earnedPointsElement = document.getElementById('earned-points');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const searchBox = document.getElementById('search-box');
+        const searchBtn = document.getElementById('search-btn');
+        const searchResults = document.getElementById('search-results');
+
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load products
+            displayProducts(products);
+            
+            // Set up event listeners
+            setupEventListeners();
+            
+            // Update points display
+            updatePointsDisplay();
+            
+            // Initialize filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    filterProducts(category);
+                });
+            });
+            
+            // Add ripple effect to buttons
+            document.querySelectorAll('.ripple').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const x = e.clientX - e.target.getBoundingClientRect().left;
+                    const y = e.clientY - e.target.getBoundingClientRect().top;
+                    
+                    const circle = document.createElement('span');
+                    circle.style.left = x + 'px';
+                    circle.style.top = y + 'px';
+                    
+                    this.appendChild(circle);
+                    
+                    setTimeout(() => {
+                        circle.remove();
+                    }, 600);
+                });
+            });
+        });
+
+        // ===== SEARCH FUNCTIONALITY =====
+        searchBox.addEventListener('input', function() {
+            const searchTerm = this.value.trim().toLowerCase();
+            
+            if (searchTerm.length === 0) {
+                searchResults.classList.remove('active');
+                return;
+            }
+            
+            // Filter products based on search term
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchTerm) || 
+                product.category.toLowerCase().includes(searchTerm) ||
+                product.store.toLowerCase().includes(searchTerm)
+            );
+            
+            // Display search results
+            displaySearchResults(filteredProducts, searchTerm);
+        });
+
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = searchBox.value.trim().toLowerCase();
+            
+            if (searchTerm.length === 0) {
+                searchResults.classList.remove('active');
+                return;
+            }
+            
+            // Filter products based on search term
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchTerm) || 
+                product.category.toLowerCase().includes(searchTerm) ||
+                product.store.toLowerCase().includes(searchTerm)
+            );
+            
+            // Display search results
+            displaySearchResults(filteredProducts, searchTerm);
+        });
+
+        // Close search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-container')) {
+                searchResults.classList.remove('active');
+            }
+        });
+
+        function displaySearchResults(filteredProducts, searchTerm) {
+            searchResults.innerHTML = '';
+            
+            if (filteredProducts.length === 0) {
+                searchResults.innerHTML = '<div class="no-results">No products found for "' + searchTerm + '"</div>';
+            } else {
+                filteredProducts.forEach(product => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'search-result-item';
+                    resultItem.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="search-result-img">
+                        <div class="search-result-info">
+                            <h4>${product.name}</h4>
+                            <p>${product.category} • ${product.store} • ${product.discountedPrice}</p>
+                        </div>
+                    `;
+                    
+                    resultItem.addEventListener('click', function() {
+                        // Scroll to products section
+                        document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+                        
+                        // Filter products to show only this category
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        filterButtons[0].classList.add('active');
+                        
+                        // Display products from this category
+                        const categoryProducts = products.filter(p => p.category === product.category);
+                        displayProducts(categoryProducts);
+                        
+                        // Clear search box and hide results
+                        searchBox.value = '';
+                        searchResults.classList.remove('active');
+                    });
+                    
+                    searchResults.appendChild(resultItem);
+                });
+            }
+            
+            searchResults.classList.add('active');
+        }
+
+        // ===== PRODUCT FUNCTIONS =====
+        function displayProducts(productsArray) {
+            productsContainer.innerHTML = '';
+            
+            productsArray.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-category', product.category);
+                
+                // Generate star rating HTML
+                const stars = generateStars(product.rating);
+                
+                productCard.innerHTML = `
+                    <div class="product-badge">${product.discount}</div>
+                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                    <div class="product-content">
+                        <span class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</span>
+                        <div class="product-store">
+                            <i class="fas fa-store store-icon"></i>
+                            <span>Available on ${product.store}</span>
+                        </div>
+                        <h3 class="product-title">${product.name}</h3>
+                        
+                        <div class="product-rating">
+                            <div class="stars">${stars}</div>
+                            <span class="rating-count">${product.rating} (${product.ratingCount})</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="original-price">${product.originalPrice}</span>
+                            <span class="discounted-price">${product.discountedPrice}</span>
+                        </div>
+                        <button class="buy-now-btn" data-id="${product.id}" data-link="${product.affiliateLink}">
+                            <i class="fas fa-shopping-cart"></i> Buy Now on ${product.store}
+                        </button>
+                    </div>
+                `;
+                
+                productsContainer.appendChild(productCard);
+            });
+            
+            // Add event listeners to Buy Now buttons
+            document.querySelectorAll('.buy-now-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-id');
+                    const affiliateLink = this.getAttribute('data-link');
+                    showRedirectPopup(affiliateLink);
+                });
+            });
+        }
+
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 >= 0.5;
+            let starsHTML = '';
+            
+            // Add full stars
+            for (let i = 0; i < fullStars; i++) {
+                starsHTML += '<i class="fas fa-star"></i>';
+            }
+            
+            // Add half star if needed
+            if (hasHalfStar) {
+                starsHTML += '<i class="fas fa-star-half-alt"></i>';
+            }
+            
+            // Add empty stars
+            const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+            for (let i = 0; i < emptyStars; i++) {
+                starsHTML += '<i class="far fa-star"></i>';
+            }
+            
+            return starsHTML;
+        }
+
+        function filterProducts(category) {
+            if (category === 'all') {
+                displayProducts(products);
+            } else {
+                const filteredProducts = products.filter(product => product.category === category);
+                displayProducts(filteredProducts);
+            }
+        }
+
+        // ===== REWARD SYSTEM FUNCTIONS =====
+        function addPoints(points) {
+            rewardPoints += points;
+            updatePointsDisplay();
+            
+            // Show notification
+            earnedPointsElement.textContent = points;
+            pointsNotification.classList.add('show');
+            
+            setTimeout(() => {
+                pointsNotification.classList.remove('show');
+            }, 3000);
+        }
+
+        function updatePointsDisplay() {
+            pointsCount.textContent = rewardPoints;
+            navPoints.textContent = rewardPoints;
+            
+            // Update progress bar
+            const progressPercent = Math.min((rewardPoints / 200) * 100, 100);
+            progressFill.style.width = `${progressPercent}%`;
+            
+            // Update claim button
+            if (rewardPoints >= 200) {
+                claimBtn.disabled = false;
+                claimBtn.textContent = "Claim Rewards!";
+                claimBtn.style.backgroundColor = "#fbbf24";
+                claimBtn.style.color = "#78350f";
+            } else {
+                claimBtn.disabled = true;
+                claimBtn.textContent = `Claim Rewards (${200 - rewardPoints} pts needed)`;
+                claimBtn.style.backgroundColor = "";
+                claimBtn.style.color = "";
+            }
+        }
+
+        // ===== REDIRECT POPUP FUNCTIONS =====
+        function showRedirectPopup(affiliateLink) {
+            currentRedirectLink = affiliateLink;
+            countdownValue = 5;
+            countdownElement.textContent = countdownValue;
+            redirectPopup.classList.add('show');
+            
+            // Start countdown
+            countdownTimer = setInterval(() => {
+                countdownValue--;
+                countdownElement.textContent = countdownValue;
+                
+                if (countdownValue <= 0) {
+                    clearInterval(countdownTimer);
+                    redirectToAffiliate();
+                }
+            }, 1000);
+        }
+
+        function hideRedirectPopup() {
+            clearInterval(countdownTimer);
+            redirectPopup.classList.remove('show');
+        }
+
+        function redirectToAffiliate() {
+            // Add reward points
+            addPoints(5);
+            
+            // Open affiliate link in new tab
+            window.open(currentRedirectLink, '_blank');
+            
+            // Hide popup
+            hideRedirectPopup();
+        }
+
+        // ===== EVENT LISTENERS SETUP =====
+        function setupEventListeners() {
+            // Continue redirect button
+            continueRedirectBtn.addEventListener('click', redirectToAffiliate);
+            
+            // Cancel redirect button
+            cancelRedirectBtn.addEventListener('click', hideRedirectPopup);
+            
+            // Claim rewards button
+            claimBtn.addEventListener('click', function() {
+                if (rewardPoints >= 200) {
+                    alert("🎉 Congratulations! You've claimed your rewards! (This is a demo feature)");
+                    rewardPoints -= 200;
+                    updatePointsDisplay();
+                }
+            });
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav-links') && !e.target.closest('.mobile-menu-btn')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+            
+            // Category links in footer
+            document.querySelectorAll('.footer-links a[data-category]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.getAttribute('data-category');
+                    
+                    // Scroll to categories section
+                    document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Activate the corresponding filter button
+                    filterButtons.forEach(button => {
+                        button.classList.remove('active');
+                        if (button.getAttribute('data-category') === category) {
+                            button.classList.add('active');
+                        }
+                    });
+                    
+                    // Filter products
+                    setTimeout(() => filterProducts(category), 500);
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href !== "#") {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                    
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Search box enter key support
+            searchBox.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchBtn.click();
+                }
+            });
+        }
+
+        // ===== EXTRA ANIMATIONS =====
+        // Add hover effect to product cards
+        document.addEventListener('mousemove', function(e) {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
